@@ -27,6 +27,7 @@ Route::group([
 
     Route::group([
         'prefix' => 'registration',
+        'middleware' => 'can:seat-connector.view',
     ], function (): void {
 
         Route::get('/discord', [
